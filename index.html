@@ -21,6 +21,7 @@
     <nav class="navbar">
       <div class="logo">MY PORTFOLIO</div>
 
+      <!-- DESKTOP NAV -->
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -29,7 +30,24 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
+      <!-- THEME TOGGLE -->
       <button class="mode-toggle" onclick="toggleTheme()">🌓</button>
+
+      <!-- MOBILE HAMBURGER -->
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#interests">Interests</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <!-- HERO -->
@@ -62,17 +80,14 @@
       <div class="about-container">
         <h2 class="section-title">About Me</h2>
         <p class="about-text">
-          I didn’t start out knowing I would land in tech and I simply followed
-          my curiosity. I’ve always enjoyed figuring out how things work,
-          simplifying complicated ideas, and making sense of chaos. That
-          curiosity led me through an IT degree, into QA training, and through
-          experiences in digital marketing, content, and project roles. Each
-          step taught me something different: how users behave, how teams
-          collaborate, and how small details shape big experiences. Today, I
-          enjoy being the person who asks questions, digs deeper, and makes
-          systems cleaner, smoother, and easier to understand. I love thoughtful
-          work, the kind that requires patience, collaboration, and a little
-          creativity.
+          I didn’t start out knowing I would land in tech; I simply followed my curiosity.
+          I’ve always enjoyed figuring out how things work, simplifying complicated ideas, 
+          and making sense of chaos. That curiosity led me through an IT degree, into QA 
+          training, and through experiences in digital marketing, content, and project roles. 
+          Each step taught me something different: how users behave, how teams collaborate, 
+          and how small details shape big experiences. Today, I enjoy asking questions, 
+          digging deeper, and making systems cleaner, smoother, and easier to understand — 
+          the kind of thoughtful work that requires patience, collaboration, and a little creativity.
         </p>
       </div>
     </section>
@@ -87,8 +102,8 @@
           <div class="timeline-content">
             <h3>QA Skills</h3>
             <p>
-              Manual testing, UI validation, bug reporting, Cypress automation
-              using POM, fixtures, and custom commands.
+              Manual testing, UI validation, bug reporting,
+              Cypress automation using POM, fixtures, and custom commands.
             </p>
           </div>
         </div>
@@ -96,10 +111,10 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>Project Management experience</h3>
+            <h3>Project Management</h3>
             <p>
-              Led a team of four, managed timelines, improved communication, and
-              ensured smooth delivery.
+              Led a team of four, managed timelines, improved communication,
+              and ensured smooth delivery.
             </p>
           </div>
         </div>
@@ -107,7 +122,7 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>AI project— Python</h3>
+            <h3>AI Project — Python</h3>
             <p>
               Worked on data cleaning, visualization and predictive modeling.
             </p>
@@ -135,22 +150,21 @@
         <h2 class="section-title">Contact</h2>
 
         <p class="contact-intro">
-          If you’d like to connect about work or ideas, I’d love to hear from
-          you!
+          If you’d like to connect about work or ideas, I’d love to hear from you!
         </p>
 
         <div class="contact-item">
           <span class="contact-icon">📧</span>
-          <a href="mailto:neelishashrestha@gmail.com"
-            >neelishashrestha@gmail.com</a
-          >
+          <a href="mailto:neelishashrestha@gmail.com">
+            neelishashrestha@gmail.com
+          </a>
         </div>
 
         <div class="contact-item">
           <span class="contact-icon">📸</span>
-          <a href="https://instagram.com/nelysaa_" target="_blank"
-            >@nelysaa_</a
-          >
+          <a href="https://instagram.com/nelysaa_" target="_blank">
+            @nelysaa_
+          </a>
         </div>
 
         <div class="contact-item">
@@ -158,8 +172,9 @@
           <a
             href="https://www.linkedin.com/in/neelisha-shrestha"
             target="_blank"
-            >neelisha-shrestha</a
           >
+            neelisha-shrestha
+          </a>
         </div>
       </div>
     </section>
@@ -175,6 +190,17 @@
       </div>
     </footer>
 
+    <!-- SCRIPTS -->
     <script src="script.js"></script>
+
+    <script>
+      const burger = document.getElementById("hamburgerBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        menu.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>

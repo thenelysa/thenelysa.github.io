@@ -46,3 +46,10 @@ function toggleTheme() {
 if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light");
 }
+const burger = document.getElementById("hamburgerBtn");
+const menu = document.getElementById("mobileMenu");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  menu.classList.toggle("open");
+});

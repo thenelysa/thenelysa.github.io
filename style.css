@@ -403,4 +403,259 @@ body.light #contact a {
     text-align: center;
 }
 
+/* ================================
+   MOBILE FIXES (IMPORTANT)
+================================ */
 
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    nav ul {
+        display: none; /* hide the big navbar */
+    }
+
+    /* Make logo centered */
+    .logo {
+        font-size: 1.3rem;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    /* Create mobile menu toggle */
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        top: 22px;
+        right: 25px;
+        font-size: 28px;
+        cursor: pointer;
+        color: var(--text);
+    }
+
+    /* Mobile menu dropdown */
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background: rgba(255,255,255,0.05);
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 10px;
+    }
+
+    .mobile-menu a {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+
+    /* HERO SECTION */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-left {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-left h1 {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    .hero-left p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero-image {
+        width: 260px;
+        height: 260px;
+        margin: auto;
+    }
+
+
+    /* ABOUT SECTION */
+    #about {
+        padding: 30px 20px;
+    }
+
+    .about-content {
+        max-width: 95%;
+        font-size: 1rem;
+    }
+
+
+    /* INTERESTS */
+    .interest-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .interest-pill {
+        width: 90%;
+        max-width: 330px;
+        padding: 15px;
+    }
+
+    /* CONTACT */
+    .contact-card {
+        width: 90%;
+        margin: auto;
+        padding: 25px;
+    }
+
+    #contact h2 {
+        text-align: center;
+    }
+
+    .contact-info {
+        font-size: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 25px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* EXTRA: Fix the blurred navbar on scroll */
+nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* HIDE MOBILE STUFF ON DESKTOP */
+.hamburger, 
+.mobile-menu {
+  display: none;
+}
+
+/* DESKTOP NAV STYLES */
+.desktop-nav {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+/* ---------------------------------------------------
+      MOBILE NAVIGATION (WILL NOT AFFECT DESKTOP)
+----------------------------------------------------*/
+@media (max-width: 820px) {
+
+  /* Hide desktop nav */
+  nav ul, .nav-links {
+    display: none !important;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 9999;
+  }
+
+  .hamburger span {
+    width: 100%;
+    height: 4px;
+    background: var(--text-color);
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+  /* Hamburger animation */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Mobile menu */
+  .mobile-menu {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    gap: 20px;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+  }
+
+  .mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobile-menu a {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+}
+/* MOBILE FIX — Contact Alignment */
+@media (max-width: 768px) {
+
+    .contact-card {
+        padding: 25px 20px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+        flex-wrap: nowrap;      /* prevent breaking */
+    }
+
+    .contact-item span,
+    .contact-item a {
+        font-size: 1rem;
+        white-space: nowrap;    /* on mobile, keep in one line */
+    }
+
+    /* If still too long, allow ICON + TEXT to stack nicely */
+    .contact-item a {
+        overflow-wrap: anywhere;
+        max-width: 70vw;        /* prevents pushing out of container */
+    }
+}
