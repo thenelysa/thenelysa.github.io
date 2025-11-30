@@ -1,0 +1,406 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* THEME COLORS */
+:root {
+    --sage-dark: #1F2C27;
+    --sage-darker: #18221E;
+    --cream: #FBF8F5;
+    --brown: #B98C6C;
+    --green: #6D9775;
+    --text-cream: #F7F2EC;
+}
+
+/* LIGHT MODE */
+.light {
+    --sage-dark: #F7F5F2;
+    --sage-darker: #EEEAE6;
+    --text-cream: #2C2C2C;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(to bottom, var(--sage-dark), var(--sage-darker));
+    color: var(--text-cream);
+    font-family: "Raleway", sans-serif;
+    opacity: 0;
+    animation: fadeInPage 0.9s ease forwards;
+}
+
+/* PAGE FADE */
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* SCROLL BAR */
+#scrollBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: var(--green);
+    width: 0%;
+    z-index: 9999;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 92%;
+    margin: 20px auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.2);
+    position: sticky;
+    top: 18px;
+    z-index: 2000;
+}
+
+.logo {
+    font-family: "Sora";
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-cream);
+    font-size: 15px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+/* MODE TOGGLE */
+.mode-toggle {
+    background: transparent;
+    border: 2px solid var(--brown);
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-cream);
+}
+
+/* HERO */
+.hero {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 70px;
+    background: var(--cream);
+    color: #3A2F2B;
+    border-radius: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+}
+
+.hero-left h1 {
+    font-family: "Sora";
+    font-size: 45px;
+}
+
+.sub {
+    margin-top: 10px;
+    max-width: 480px;
+    color: #5a4d44;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    background: var(--brown);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-outline {
+    border: 2px solid var(--brown);
+    padding: 12px 30px;
+    border-radius: 8px;
+    color: var(--brown);
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn:hover,
+.btn-outline:hover {
+    transform: translateY(-5px);
+}
+
+/* BLOB IMAGE */
+.image-blob {
+    width: 330px;
+    height: 330px;
+    border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+    overflow: hidden;
+    border: 6px solid var(--brown);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.22);
+    animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+}
+
+.image-blob img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 10%;
+}
+
+.section h2 {
+    font-family: "Sora";
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* TIMELINE */
+.timeline {
+    border-left: 3px solid var(--brown);
+    padding-left: 30px;
+    margin-left: 15px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--brown);
+    border-radius: 50%;
+    position: absolute;
+    left: -42px;
+    top: 5px;
+}
+
+.timeline-content {
+    padding: 10px 0;
+}
+
+.timeline-content h3 {
+    color: var(--text-cream);
+    margin-bottom: 6px;
+}
+
+/* INTEREST BLOBS */
+.interest-blobs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.blob {
+    background: var(--cream);
+    padding: 18px 28px;
+    border-radius: 60px;
+    font-weight: 600;
+    border: 3px solid var(--green);
+    font-family: "Sora";
+}
+/* FIX: Make Interest Blobs Visible in Dark Mode */
+body:not(.light) .blob {
+    background: #F6F2EC;        /* Light beige blob */
+    color: #1A1A1A;             /* Dark text so it's readable */
+    border-color: #6D9775;      /* Soft green border */
+}
+
+/* Light Mode */
+body.light .blob {
+    background: #FFFFFF;
+    color: #2C2A28;
+    border-color: #6D9775;
+}
+
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.footer-icons a {
+    font-size: 22px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.9s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+/* Contact section link styling */
+#contact a {
+    color: #E8E2DA;   /* light beige – visible on dark bg */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    color: #C8B282;   /* soft brown hover */
+    text-decoration: underline;
+}
+/* CONTACT SECTION UPGRADE */
+#contact {
+    padding: 80px 12%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    background: var(--cream);
+    padding: 40px 50px;
+    border-radius: 20px;
+    max-width: 750px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+body:not(.light) .contact-card {
+    background: #20322E; /* deep green card */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.contact-intro {
+    font-size: 19px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Contact rows */
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.contact-icon {
+    font-size: 22px;
+    margin-right: 12px;
+}
+
+/* Contact Links */
+#contact a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Underline animation */
+#contact a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: var(--green);
+    transition: width 0.3s;
+}
+
+#contact a:hover::after {
+    width: 100%;
+}
+
+/* Light mode fixes */
+body.light .contact-card {
+    background: #FFFFFF;
+}
+
+body.light #contact a {
+    color: #2C2A28;
+}
+#about {
+    padding: 80px 12%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-text {
+    line-height: 1.7;
+    font-size: 19px;
+    color: var(--text-color);
+    margin-top: 20px;
+    white-space: normal;   /* most important line */
+}
+/* FIX ABOUT SECTION WIDTH */
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;          /* centers it */
+    padding: 40px 0;
+}
+
+#about {
+    padding: 80px 5%;   /* was 12% — now much smaller */
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    max-width: 1100px;  /* wider container */
+    text-align: center;
+}
+
+
