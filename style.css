@@ -659,3 +659,36 @@ nav {
         max-width: 70vw;        /* prevents pushing out of container */
     }
 }
+/* --- CONTACT MOBILE FIX --- */
+@media (max-width: 768px) {
+
+  .contact-card {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 22px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* ICON */
+  .contact-item span {
+    font-size: 1.4rem;
+    flex-shrink: 0; /* Prevent icon from moving */
+    margin-top: 2px;
+  }
+
+  /* TEXT LINK */
+  .contact-item a {
+    font-size: 1rem;
+    line-height: 1.4;
+    white-space: normal;      /* Allow line breaks */
+    word-break: break-word;   /* Break long email safely */
+    overflow-wrap: break-word;
+    max-width: 75vw;          /* Prevent overflow */
+    display: block;
+  }
+}
