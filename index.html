@@ -1,162 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neelisha Shrestha | Portfolio</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <div id="scrollBar"></div>
 
-<div id="scrollBar"></div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">MY PORTFOLIO</div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">MY PORTFOLIO</div>
-
-    <ul class="nav-links">
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#interests">Interests</a></li>
         <li><a href="#contact">Contact</a></li>
-    </ul>
+      </ul>
 
-    <button class="mode-toggle" onclick="toggleTheme()">🌓</button>
-</nav>
+      <button class="mode-toggle" onclick="toggleTheme()">🌓</button>
+    </nav>
 
-<!-- HERO -->
-<section id="home" class="hero reveal">
-    <div class="hero-left">
+    <!-- HERO -->
+    <section id="home" class="hero reveal">
+      <div class="hero-left">
         <h1>Hi, I'm <span class="highlight">Neelisha Shrestha.</span></h1>
 
         <p class="sub">
-            I enjoy technology, creativity, and crafting simple, seamless experiences.
+          I enjoy technology, creativity, and crafting simple, seamless
+          experiences.
         </p>
 
         <div class="hero-buttons">
-            <a href="Neelisha.Shrestha-CV (1).pdf" download class="btn">Download CV</a>
-            <a href="#contact" class="btn-outline">Say Hello</a>
+          <a href="Neelisha.Shrestha-CV (1).pdf" download class="btn"
+            >Download CV</a
+          >
+          <a href="#contact" class="btn-outline">Say Hello</a>
         </div>
-    </div>
+      </div>
 
-    <div class="hero-img">
+      <div class="hero-img">
         <div class="image-blob">
-            <img src="photo-1.png" alt="Neelisha">
+          <img src="photo-1.png" alt="Neelisha" />
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ABOUT -->
-<section id="about">
-    <div class="about-container">
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-container">
         <h2 class="section-title">About Me</h2>
         <p class="about-text">
-          I didn’t start out knowing I would land in tech and I simply followed my curiosity.
-I’ve always enjoyed figuring out how things work, simplifying complicated ideas, and making sense of chaos.
-
-That curiosity led me through an IT degree, into QA training, and through experiences in digital marketing, content, and project roles.
-Each step taught me something different:
-how users behave, how teams collaborate, and how small details shape big experiences.
-
-Today, I enjoy being the person who asks questions, digs deeper, and makes systems cleaner, smoother, and easier to understand.
-I love thoughtful work, the kind that requires patience, collaboration, and a little creativity.
+          I didn’t start out knowing I would land in tech and I simply followed
+          my curiosity. I’ve always enjoyed figuring out how things work,
+          simplifying complicated ideas, and making sense of chaos. That
+          curiosity led me through an IT degree, into QA training, and through
+          experiences in digital marketing, content, and project roles. Each
+          step taught me something different: how users behave, how teams
+          collaborate, and how small details shape big experiences. Today, I
+          enjoy being the person who asks questions, digs deeper, and makes
+          systems cleaner, smoother, and easier to understand. I love thoughtful
+          work, the kind that requires patience, collaboration, and a little
+          creativity.
         </p>
-    </div>
-</section>
+      </div>
+    </section>
 
+    <!-- WORK TIMELINE -->
+    <section id="work" class="section reveal">
+      <h2>Work & Experience</h2>
 
-
-<!-- WORK TIMELINE -->
-<section id="work" class="section reveal">
-    <h2>Work & Experience</h2>
-
-    <div class="timeline">
-
+      <div class="timeline">
         <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>QA Skills</h3>
-                <p>Manual testing, UI validation, bug reporting, Cypress automation using POM, fixtures, and custom commands.</p>
-            </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>QA Skills</h3>
+            <p>
+              Manual testing, UI validation, bug reporting, Cypress automation
+              using POM, fixtures, and custom commands.
+            </p>
+          </div>
         </div>
 
         <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Project Management experience</h3>
-                <p>Led a team of four, managed timelines, improved communication, and ensured smooth delivery.</p>
-            </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Project Management experience</h3>
+            <p>
+              Led a team of four, managed timelines, improved communication, and
+              ensured smooth delivery.
+            </p>
+          </div>
         </div>
 
         <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>AI project— Python</h3>
-                <p>Worked on data cleaning, visualization and predictive modeling.</p>
-            </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>AI project— Python</h3>
+            <p>
+              Worked on data cleaning, visualization and predictive modeling.
+            </p>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-</section>
+    <!-- INTERESTS -->
+    <section id="interests" class="section reveal">
+      <h2>Interests</h2>
 
-<!-- INTERESTS -->
-<section id="interests" class="section reveal">
-    <h2>Interests</h2>
-
-    <div class="interest-blobs">
+      <div class="interest-blobs">
         <div class="blob">Reading</div>
         <div class="blob">Human Behaviour</div>
         <div class="blob">Personal Growth</div>
         <div class="blob">Exploring Places</div>
         <div class="blob">Mindfulness</div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- CONTACT -->
-<section id="contact">
-    <div class="contact-card">
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-card">
         <h2 class="section-title">Contact</h2>
 
         <p class="contact-intro">
-            If you’d like to connect about work or ideas, I’d love to hear from you!
+          If you’d like to connect about work or ideas, I’d love to hear from
+          you!
         </p>
 
         <div class="contact-item">
-            <span class="contact-icon">📧</span>
-            <a href="mailto:neelishashrestha@gmail.com">neelishashrestha@gmail.com</a>
+          <span class="contact-icon">📧</span>
+          <a href="mailto:neelishashrestha@gmail.com"
+            >neelishashrestha@gmail.com</a
+          >
         </div>
 
         <div class="contact-item">
-            <span class="contact-icon">📸</span>
-            <a href="https://instagram.com/nelysaa__" target="_blank">@nelysaa__</a>
+          <span class="contact-icon">📸</span>
+          <a href="https://instagram.com/nelysaa_" target="_blank"
+            >@nelysaa_</a
+          >
         </div>
 
         <div class="contact-item">
-            <span class="contact-icon">💼</span>
-            <a href="https://www.linkedin.com/in/neelisha-shrestha" target="_blank">neelisha-shrestha</a>
+          <span class="contact-icon">💼</span>
+          <a
+            href="https://www.linkedin.com/in/neelisha-shrestha"
+            target="_blank"
+            >neelisha-shrestha</a
+          >
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 Neelisha Shrestha • Made with Curiosity and Calm</p>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <p>© 2025 Neelisha Shrestha • Made with Curiosity and Calm</p>
-
-    <div class="footer-icons">
+      <div class="footer-icons">
         <a href="#">📸</a>
         <a href="#">🔗</a>
         <a href="#">💻</a>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
