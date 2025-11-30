@@ -692,3 +692,40 @@ nav {
     display: block;
   }
 }
+/* --- CLEAN STACKED EMAIL FOR MOBILE --- */
+@media (max-width: 768px) {
+
+  .contact-card {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 22px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  /* ICON stays aligned */
+  .contact-item span {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  /* SPECIAL: Email link styling */
+  .contact-item.email a {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.35;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Forces each half of email onto its own line */
+  .contact-item.email a .email-part {
+    display: block;
+  }
+}
