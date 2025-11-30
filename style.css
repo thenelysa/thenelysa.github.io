@@ -236,70 +236,40 @@ body {
     border: 3px solid var(--green);
     font-family: "Sora";
 }
-/* FIX: Make Interest Blobs Visible in Dark Mode */
+
+/* Dark mode fix */
 body:not(.light) .blob {
-    background: #F6F2EC;        /* Light beige blob */
-    color: #1A1A1A;             /* Dark text so it's readable */
-    border-color: #6D9775;      /* Soft green border */
+    background: #F6F2EC;
+    color: #1A1A1A;
+    border-color: #6D9775;
 }
 
-/* Light Mode */
+/* Light mode fix */
 body.light .blob {
     background: #FFFFFF;
     color: #2C2A28;
     border-color: #6D9775;
 }
 
+/* ABOUT SECTION */
+#about {
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+}
 
-/* FOOTER */
-.footer {
+.about-container {
+    max-width: 1100px;
     text-align: center;
-    padding: 40px 0;
-    margin-top: 60px;
-    border-top: 1px solid rgba(255,255,255,0.15);
 }
 
-.footer-icons a {
-    font-size: 22px;
-    text-decoration: none;
-    margin: 0 10px;
+.about-text {
+    line-height: 1.7;
+    font-size: 19px;
+    margin-top: 20px;
 }
 
-/* SCROLL REVEAL */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.9s;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* RESPONSIVE */
-@media (max-width: 850px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-}
-/* Contact section link styling */
-#contact a {
-    color: #E8E2DA;   /* light beige – visible on dark bg */
-    text-decoration: none;
-    font-weight: 600;
-}
-
-#contact a:hover {
-    color: #C8B282;   /* soft brown hover */
-    text-decoration: underline;
-}
-/* CONTACT SECTION UPGRADE */
+/* CONTACT SECTION */
 #contact {
     padding: 80px 12%;
     display: flex;
@@ -316,416 +286,84 @@ body.light .blob {
 }
 
 body:not(.light) .contact-card {
-    background: #20322E; /* deep green card */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    background: #20322E;
 }
 
 .contact-intro {
     font-size: 19px;
     margin-bottom: 25px;
     line-height: 1.6;
-    color: var(--text-color);
 }
 
-/* Contact rows */
 .contact-item {
     display: flex;
     align-items: center;
-    font-size: 19px;
-    margin: 12px 0;
+    gap: 12px;
+    margin-bottom: 16px;
 }
 
 .contact-icon {
     font-size: 22px;
-    margin-right: 12px;
 }
 
-/* Contact Links */
+/* LINKS */
 #contact a {
-    color: var(--text-color);
+    color: var(--text-cream);
     text-decoration: none;
     font-weight: 600;
-    position: relative;
 }
 
-/* Underline animation */
-#contact a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0%;
-    height: 2px;
-    background: var(--green);
-    transition: width 0.3s;
-}
-
-#contact a:hover::after {
-    width: 100%;
-}
-
-/* Light mode fixes */
-body.light .contact-card {
-    background: #FFFFFF;
-}
-
-body.light #contact a {
-    color: #2C2A28;
-}
-#about {
-    padding: 80px 12%;
-    max-width: 900px;
-    margin: auto;
-}
-
-.about-text {
-    line-height: 1.7;
-    font-size: 19px;
-    color: var(--text-color);
-    margin-top: 20px;
-    white-space: normal;   /* most important line */
-}
-/* FIX ABOUT SECTION WIDTH */
-.about-container {
-    max-width: 900px;
-    margin: 0 auto;          /* centers it */
-    padding: 40px 0;
-}
-
-#about {
-    padding: 80px 5%;   /* was 12% — now much smaller */
-    display: flex;
-    justify-content: center;
-}
-
-.about-container {
-    max-width: 1100px;  /* wider container */
+/* FOOTER */
+.footer {
     text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
 }
 
-/* ================================
-   MOBILE FIXES (IMPORTANT)
-================================ */
-
+/* MOBILE FIXES */
 @media (max-width: 768px) {
 
-    /* NAVBAR */
-    nav ul {
-        display: none; /* hide the big navbar */
-    }
-
-    /* Make logo centered */
-    .logo {
-        font-size: 1.3rem;
-        text-align: left;
-        padding-left: 15px;
-    }
-
-    /* Create mobile menu toggle */
-    .mobile-menu-icon {
-        display: block;
-        position: absolute;
-        top: 22px;
-        right: 25px;
-        font-size: 28px;
-        cursor: pointer;
-        color: var(--text);
-    }
-
-    /* Mobile menu dropdown */
-    .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        background: rgba(255,255,255,0.05);
-        padding: 20px;
-        border-radius: 12px;
-        margin-top: 10px;
-    }
-
-    .mobile-menu a {
-        font-size: 1.2rem;
-        text-align: left;
-    }
-
-
-    /* HERO SECTION */
+    /* Hero */
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
-    }
-
-    .hero-left {
-        max-width: 100%;
-        margin-bottom: 20px;
+        padding: 25px;
     }
 
     .hero-left h1 {
         font-size: 2rem;
-        line-height: 2.4rem;
     }
 
-    .hero-left p {
-        font-size: 1rem;
-        width: 100%;
-    }
-
-    .hero-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .hero-image {
-        width: 260px;
-        height: 260px;
-        margin: auto;
-    }
-
-
-    /* ABOUT SECTION */
-    #about {
-        padding: 30px 20px;
-    }
-
-    .about-content {
-        max-width: 95%;
-        font-size: 1rem;
-    }
-
-
-    /* INTERESTS */
-    .interest-container {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .interest-pill {
-        width: 90%;
-        max-width: 330px;
-        padding: 15px;
-    }
-
-    /* CONTACT */
+    /* Contact card */
     .contact-card {
         width: 90%;
         margin: auto;
-        padding: 25px;
-    }
-
-    #contact h2 {
-        text-align: center;
-    }
-
-    .contact-info {
-        font-size: 1rem;
-    }
-
-    /* FOOTER */
-    footer {
-        text-align: center;
-        padding: 25px 10px;
-        font-size: 0.9rem;
-    }
-}
-
-/* EXTRA: Fix the blurred navbar on scroll */
-nav {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-}
-
-/* HIDE MOBILE STUFF ON DESKTOP */
-.hamburger, 
-.mobile-menu {
-  display: none;
-}
-
-/* DESKTOP NAV STYLES */
-.desktop-nav {
-  display: flex;
-  gap: 35px;
-  align-items: center;
-}
-
-/* ---------------------------------------------------
-      MOBILE NAVIGATION (WILL NOT AFFECT DESKTOP)
-----------------------------------------------------*/
-@media (max-width: 820px) {
-
-  /* Hide desktop nav */
-  nav ul, .nav-links {
-    display: none !important;
-  }
-
-  /* Show hamburger */
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    z-index: 9999;
-  }
-
-  .hamburger span {
-    width: 100%;
-    height: 4px;
-    background: var(--text-color);
-    border-radius: 5px;
-    transition: 0.3s ease;
-  }
-
-  /* Hamburger animation */
-  .hamburger.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-
-  /* Mobile menu */
-  .mobile-menu {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 100%;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    gap: 20px;
-    background: rgba(0,0,0,0.35);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.3s ease;
-  }
-
-  .mobile-menu.open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
-  .mobile-menu a {
-    color: var(--text-color);
-    font-size: 1.3rem;
-    font-weight: 500;
-  }
-
-}
-/* MOBILE FIX — Contact Alignment */
-@media (max-width: 768px) {
-
-    .contact-card {
-        padding: 25px 20px;
-        width: 90%;
-        margin: auto;
+        padding: 26px 20px;
     }
 
     .contact-item {
         display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 18px;
-        flex-wrap: nowrap;      /* prevent breaking */
+        align-items: flex-start;
+        gap: 10px;
     }
 
-    .contact-item span,
-    .contact-item a {
-        font-size: 1rem;
-        white-space: nowrap;    /* on mobile, keep in one line */
+    .contact-icon {
+        font-size: 1.3rem;
+        margin-top: 4px;
     }
 
-    /* If still too long, allow ICON + TEXT to stack nicely */
-    .contact-item a {
-        overflow-wrap: anywhere;
-        max-width: 70vw;        /* prevents pushing out of container */
+    /* EMAIL STACKING FIX */
+    .contact-item.email a {
+        display: block;
+        font-size: 0.95rem;
+        font-weight: 400;
+        line-height: 1.3;
+        white-space: normal;
+        word-break: break-word;
     }
-}
-/* --- CONTACT MOBILE FIX --- */
-@media (max-width: 768px) {
 
-  .contact-card {
-    width: 90%;
-    margin: 0 auto;
-    padding: 30px 22px;
-  }
-
-  .contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  /* ICON */
-  .contact-item span {
-    font-size: 1.4rem;
-    flex-shrink: 0; /* Prevent icon from moving */
-    margin-top: 2px;
-  }
-
-  /* TEXT LINK */
-  .contact-item a {
-    font-size: 1rem;
-    line-height: 1.4;
-    white-space: normal;      /* Allow line breaks */
-    word-break: break-word;   /* Break long email safely */
-    overflow-wrap: break-word;
-    max-width: 75vw;          /* Prevent overflow */
-    display: block;
-  }
-}
-/* --- CLEAN STACKED EMAIL FOR MOBILE --- */
-@media (max-width: 768px) {
-
-  .contact-card {
-    width: 90%;
-    margin: 0 auto;
-    padding: 30px 22px;
-  }
-
-  .contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 18px;
-  }
-
-  /* ICON stays aligned */
-  .contact-item span {
-    font-size: 1.4rem;
-    flex-shrink: 0;
-    margin-top: 4px;
-  }
-
-  /* SPECIAL: Email link styling */
-  .contact-item.email a {
-    display: block;
-    font-size: 1rem;
-    line-height: 1.35;
-    white-space: normal;
-    word-break: break-word;
-  }
-
-  /* Forces each half of email onto its own line */
-  .contact-item.email a .email-part {
-    display: block;
-  }
+    .contact-item.email a .email-part {
+        display: block;
+        margin-bottom: 2px;
+    }
 }
