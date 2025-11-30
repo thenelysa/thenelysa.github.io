@@ -366,17 +366,11 @@ body:not(.light) .contact-card {
   color: var(--text-cream);
 }
 
-/* SCROLL REVEAL */
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.9s;
-}
-
-.reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 /* =========================
    MOBILE STYLES

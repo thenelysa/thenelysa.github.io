@@ -28,12 +28,3 @@ document.querySelectorAll(".mobile-menu a").forEach((link) => {
     });
 });
 
-// Reveal Animations
-const reveals = document.querySelectorAll(".reveal");
-
-window.addEventListener("scroll", () => {
-    reveals.forEach((el) => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 150) el.classList.add("active");
-    });
-});
