@@ -1,208 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neelisha Shrestha | Portfolio</title>
 
     <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="scrollBar"></div>
 
     <!-- NAVBAR -->
     <nav class="navbar">
-      <div class="logo">MY PORTFOLIO</div>
+        <div class="logo">MY PORTFOLIO</div>
 
-      <!-- DESKTOP NAV -->
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+        <!-- Desktop Nav -->
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-      <!-- THEME TOGGLE -->
-      <button class="mode-toggle" onclick="toggleTheme()">🌓</button>
+        <!-- Dark/Light Toggle -->
+        <button class="mode-toggle" onclick="toggleTheme()">🌓</button>
 
-      <!-- MOBILE HAMBURGER -->
-      <button class="hamburger" id="hamburgerBtn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        <!-- Hamburger (Mobile) -->
+        <button class="hamburger" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
     <!-- MOBILE MENU -->
-    <nav class="mobile-menu" id="mobileMenu">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#interests">Interests</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
+    <!--<div class="mobile-menu" id="mobileMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+    </div>-->
     <!-- HERO -->
     <section id="home" class="hero reveal">
-      <div class="hero-left">
-        <h1>Hi, I'm <span class="highlight">Neelisha Shrestha.</span></h1>
+        <div class="hero-left">
+            <h1>Hi, I'm <span class="highlight">Neelisha Shrestha.</span></h1>
+            <p class="sub">I enjoy technology, creativity, and crafting simple, seamless experiences.</p>
 
-        <p class="sub">
-          I enjoy technology, creativity, and crafting simple, seamless
-          experiences.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="Neelisha.Shrestha-CV (1).pdf" download class="btn"
-            >Download CV</a
-          >
-          <a href="#contact" class="btn-outline">Say Hello</a>
+            <div class="hero-buttons">
+                <a href="Neelisha.Shrestha-CV (1).pdf" download class="btn">Download CV</a>
+                <a href="#contact" class="btn-outline">Say Hello</a>
+            </div>
         </div>
-      </div>
 
-      <div class="hero-img">
-        <div class="image-blob">
-          <img src="photo-1.png" alt="Neelisha" />
+        <div class="hero-img">
+            <div class="image-blob">
+                <img src="photo-1.png" alt="Neelisha" />
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about">
-      <div class="about-container">
-        <h2 class="section-title">About Me</h2>
-        <p class="about-text">
-          I didn’t start out knowing I would land in tech; I simply followed my curiosity.
-          I’ve always enjoyed figuring out how things work, simplifying complicated ideas, 
-          and making sense of chaos. That curiosity led me through an IT degree, into QA 
-          training, and through experiences in digital marketing, content, and project roles. 
-          Each step taught me something different: how users behave, how teams collaborate, 
-          and how small details shape big experiences. Today, I enjoy asking questions, 
-          digging deeper, and making systems cleaner, smoother, and easier to understand — 
-          the kind of thoughtful work that requires patience, collaboration, and a little creativity.
-        </p>
-      </div>
+        <div class="about-container">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                I didn’t start out knowing I would land in tech; I simply followed my curiosity.
+                I’ve always enjoyed figuring out how things work, simplifying complicated ideas,
+                and making sense of chaos. That curiosity led me through an IT degree, into QA
+                training, and through experiences in digital marketing, content, and project roles.
+                Today, I enjoy asking questions, digging deeper, and making systems smoother—
+                the kind of thoughtful work that requires patience, collaboration, and creativity.
+            </p>
+        </div>
     </section>
 
-    <!-- WORK TIMELINE -->
+    <!-- WORK -->
     <section id="work" class="section reveal">
-      <h2>Work & Experience</h2>
+        <h2>Work & Experience</h2>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>QA Skills</h3>
-            <p>
-              Manual testing, UI validation, bug reporting,
-              Cypress automation using POM, fixtures, and custom commands.
-            </p>
-          </div>
-        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>QA Skills</h3>
+                    <p>Manual testing, UI validation, bug reporting, Cypress automation using POM and fixtures.</p>
+                </div>
+            </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Project Management</h3>
-            <p>
-              Led a team of four, managed timelines, improved communication,
-              and ensured smooth delivery.
-            </p>
-          </div>
-        </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Project Management</h3>
+                    <p>Led a team of four, managed timelines, improved communication, ensured smooth delivery.</p>
+                </div>
+            </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>AI Project — Python</h3>
-            <p>
-              Worked on data cleaning, visualization and predictive modeling.
-            </p>
-          </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>AI Project — Python</h3>
+                    <p>Worked on data cleaning, visualization and predictive modeling.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- INTERESTS -->
     <section id="interests" class="section reveal">
-      <h2>Interests</h2>
+        <h2>Interests</h2>
 
-      <div class="interest-blobs">
-        <div class="blob">Reading</div>
-        <div class="blob">Human Behaviour</div>
-        <div class="blob">Personal Growth</div>
-        <div class="blob">Exploring Places</div>
-        <div class="blob">Mindfulness</div>
-      </div>
+        <div class="interest-blobs">
+            <div class="blob">Reading</div>
+            <div class="blob">Human Behaviour</div>
+            <div class="blob">Personal Growth</div>
+            <div class="blob">Exploring Places</div>
+            <div class="blob">Mindfulness</div>
+        </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
-      <div class="contact-card">
-        <h2 class="section-title">Contact</h2>
+        <div class="contact-card">
+            <h2 class="section-title">Contact</h2>
+            <p class="contact-intro">
+                If you’d like to connect about work or ideas, I’d love to hear from you!
+            </p>
 
-        <p class="contact-intro">
-          If you’d like to connect about work or ideas, I’d love to hear from you!
-        </p>
+            <!-- Email Clean Stacked -->
+            <div class="contact-item email">
+                <span class="contact-icon">📧</span>
+                <a href="mailto:neelisha.shrestha7@gmail.com">
+                    <span class="email-part">neelisha.shrestha7</span>
+                    <span class="email-part">@gmail.com</span>
+                </a>
+            </div>
 
-       <div class="contact-item email">
-  <span class="contact-icon">📧</span>
-  <a href="mailto:neelisha.shrestha7@gmail.com">
-    <span class="email-part">neelisha.shrestha7</span>
-    <span class="email-part">@gmail.com</span>
-  </a>
-</div>
+            <div class="contact-item">
+                <span class="contact-icon">📸</span>
+                <a href="https://instagram.com/nelysaa_" target="_blank">@nelysaa_</a>
+            </div>
 
-
-        <div class="contact-item">
-          <span class="contact-icon">📸</span>
-          <a href="https://instagram.com/nelysaa_" target="_blank">
-            @nelysaa_
-          </a>
+            <div class="contact-item">
+                <span class="contact-icon">💼</span>
+                <a href="https://www.linkedin.com/in/neelisha-shrestha" target="_blank">neelisha-shrestha</a>
+            </div>
         </div>
-
-        <div class="contact-item">
-          <span class="contact-icon">💼</span>
-          <a
-            href="https://www.linkedin.com/in/neelisha-shrestha"
-            target="_blank"
-          >
-            neelisha-shrestha
-          </a>
-        </div>
-      </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-      <p>© 2025 Neelisha Shrestha • Made with Curiosity and Calm</p>
-
-      <div class="footer-icons">
-        <a href="#">📸</a>
-        <a href="#">🔗</a>
-        <a href="#">💻</a>
-      </div>
+        <p>© 2025 Neelisha Shrestha • Made with Curiosity and Calm</p>
+        <div class="footer-icons">
+            <a href="#">📸</a>
+            <a href="#">🔗</a>
+            <a href="#">💻</a>
+        </div>
     </footer>
 
-    <!-- SCRIPTS -->
     <script src="script.js"></script>
-
-    <script>
-      const burger = document.getElementById("hamburgerBtn");
-      const menu = document.getElementById("mobileMenu");
-
-      burger.addEventListener("click", () => {
-        burger.classList.toggle("active");
-        menu.classList.toggle("open");
-      });
-    </script>
-  </body>
+</body>
 </html>

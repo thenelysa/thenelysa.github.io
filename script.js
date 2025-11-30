@@ -1,55 +1,39 @@
-// Scroll Reveal
-const reveals = document.querySelectorAll('.reveal');
-
-function revealOnScroll() {
-    reveals.forEach(el => {
-        const rect = el.getBoundingClientRect().top;
-        if (rect < window.innerHeight - 120) {
-            el.classList.add('active');
-        }
-    });
-}
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
-
-// Custom Cursor
-const cursor = document.createElement("div");
-cursor.classList.add("cursor-dot");
-document.body.appendChild(cursor);
-
-document.addEventListener("mousemove", (e) => {
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY}px`;
-});
-
-// Scroll Progress Bar
-window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    document.getElementById("scrollBar").style.width = scrollPercent + "%";
-});
-
-// Light/Dark Mode Toggle
+// Dark / Light Toggle
 function toggleTheme() {
     document.body.classList.toggle("light");
-
-    // Save mode
-    if (document.body.classList.contains("light")) {
-        localStorage.setItem("theme", "light");
-    } else {
-        localStorage.setItem("theme", "dark");
-    }
 }
 
-// Load saved mode
-if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light");
-}
-const burger = document.getElementById("hamburgerBtn");
-const menu = document.getElementById("mobileMenu");
+// Scroll progress bar
+window.addEventListener("scroll", () => {
+    const scrollBar = document.getElementById("scrollBar");
+    const height = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+    scrollBar.style.width = `${(scrolled / height) * 100}%`;
+});
 
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  menu.classList.toggle("open");
+// Hamburger Menu
+const hamburger = document.getElementById("hamburgerBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mobileMenu.classList.toggle("open");
+});
+
+// Close menu when clicking a link
+document.querySelectorAll(".mobile-menu a").forEach((link) => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        hamburger.classList.remove("active");
+    });
+});
+
+// Reveal Animations
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+    reveals.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 150) el.classList.add("active");
+    });
 });
