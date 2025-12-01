@@ -27,4 +27,9 @@ document.querySelectorAll(".mobile-menu a").forEach((link) => {
         hamburger.classList.remove("active");
     });
 });
+window.addEventListener("scroll", function() {
+  const nav = document.querySelector(".navbar");
+  if (window.scrollY > 20) nav.classList.add("scrolled");
+  else nav.classList.remove("scrolled");
+});
 

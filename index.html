@@ -16,7 +16,7 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="logo">MY PORTFOLIO</div>
+        <div class="logo">Nelysa</div>
 
         <!-- Desktop Nav -->
         <ul class="nav-links">
@@ -39,13 +39,13 @@
     </nav>
 
     <!-- MOBILE MENU -->
-    <!--<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#interests">Interests</a>
         <a href="#contact">Contact</a>
-    </div> -->
+    </div>
     <!-- HERO -->
     <section id="home" class="hero reveal">
         <div class="hero-left">
@@ -53,7 +53,7 @@
             <p class="sub">I enjoy technology, creativity, and crafting simple, seamless experiences.</p>
 
             <div class="hero-buttons">
-                <a href="Neelisha.Shrestha-CV (1).pdf" download class="btn">Download CV</a>
+                <a href="Neelisha.Shrestha-CV.pdf" download class="btn">Download CV</a>
                 <a href="#contact" class="btn-outline">Say Hello</a>
             </div>
         </div>
@@ -74,7 +74,7 @@
                 I’ve always enjoyed figuring out how things work, simplifying complicated ideas,
                 and making sense of chaos. That curiosity led me through an IT degree, into QA
                 training, and through experiences in digital marketing, content, and project roles.
-                Today, I enjoy asking questions, digging deeper, and making systems smoother—
+                Today, I enjoy asking questions, digging deeper, and making systems smoother
                 the kind of thoughtful work that requires patience, collaboration, and creativity.
             </p>
         </div>
@@ -110,20 +110,26 @@
             </div>
         </div>
     </section>
+<div id="cursor"></div>
 
     <!-- INTERESTS -->
     <section id="interests" class="section reveal">
         <h2>Interests</h2>
-
-        <div class="interest-blobs">
-            <div class="blob">Reading</div>
-            <div class="blob">Learning Human Behaviour</div>
-            <div class="blob">Personal Growth</div>
-            <div class="blob">Exploring Places</div>
-            <div class="blob">Mindfulness</div>
-        </div>
-    </section>
-
+    <div class="interest-blob blob1">
+  <span>Reading</span>
+</div>
+    <div class="interest-blob blob1">
+  <span>Learning Human Behaviour</span> 
+</div>
+    <div class="interest-blob blob1">
+    <span>Personal Growth</span>        
+</div>
+    <div class="interest-blob blob1"> 
+    <span>Exploring Places</span>
+</div>
+    <div class="interest-blob blob1">
+    <span>Mindfulness</span>
+</div>
     <!-- CONTACT -->
     <section id="contact">
         <div class="contact-card">
@@ -163,5 +169,14 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+  const cursor = document.getElementById("cursor");
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.top = e.clientY + "px";
+    cursor.style.left = e.clientX + "px";
+  });
+</script>
+
 </body>
 </html>
