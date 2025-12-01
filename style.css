@@ -1,3 +1,7 @@
+
+.mobile-menu {
+    z-index: 5000 !important;
+}
 /* RESET */
 * {
   margin: 0;
@@ -109,6 +113,11 @@ body {
 /* HAMBURGER — DESKTOP HIDDEN BY DEFAULT */
 .hamburger {
   display: none;
+  /* HIDE MOBILE MENU ON DESKTOP */
+.mobile-menu {
+    display: none !important;
+}
+
   background: none;
   border: none;
   cursor: pointer;
@@ -395,6 +404,11 @@ body:not(.light) .contact-card {
     height: 22px;
     margin-left: 10px;
   }
+  /* HIDE MOBILE MENU ON DESKTOP */
+.mobile-menu {
+    display: none !important;
+}
+
 
   .hamburger.active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
@@ -588,4 +602,7 @@ body:not(.light) .contact-card {
         font-size: 1.3rem;
         font-weight: 500;
     }
+}
+.mobile-menu {
+    display: flex !important;
 }
